@@ -1,4 +1,4 @@
-data '/etc/hosts'
-user 'root'
-passwd 'r00tme'
+data /etc/hosts
+user root
+passwd r00tme
 

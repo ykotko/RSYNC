@@ -2,8 +2,8 @@
 import subprocess
 import sys
 import os
-from fuel_health.common.ssh import Client
-
+#from fuel_health.common.ssh import Client
+from ssh import Client
 a = open('config.sh', 'r')
 content = a.readlines()
 for l in content:
@@ -29,10 +29,10 @@ else:
     f = open('path_file', 'w+')
     f.write(path)
 try:
-    rc = "rsync -rzv {0} {1}@{2}:{3}".format(data,user,ip,path)
-    subprocess.call( rc.split(' ') )
+#    rc = "rsync -rzv {0} {1}@{2}:{3}".format(data,user,ip,path)
+#    subprocess.call( rc.split(' ') )
 #    subprocess.call(['rsync' ,'-rzv' ,data,user+'@'+ip+':'+path])
-#    subprocess.call('rsync' ,'-rzv' ,data,'{user}@{ip}:{path}'.format(user = user, ip = ip, path = path))
+    subprocess.call(['rsync' ,'-rzv' ,data,'{user}@{ip}:{path}'.format(user = user, ip = ip, path = path)])
 except Exception as e:
     print 'Exception {var}'.format(var = e)
 
