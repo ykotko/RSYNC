@@ -17,6 +17,7 @@ for l in content:
 #cmdargs = (sys.argv)
 #ip = sys.argv[1]
 #path = sys.argv[2]
+#
 
 ip = raw_input("Enter the ip address: ")
 if os.path.exists('path_file'):
