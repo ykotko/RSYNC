@@ -54,6 +54,7 @@ class Interface():
                 passwd = l.split()[1]
         a.close()
         return [data,user,passwd]
+    print 'TEST'
     #data,user,passwd = settings()
 
 
